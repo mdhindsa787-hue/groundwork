@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>Blush Studio · Ringwood</title><meta name="description" content="Blush Studio: Cuts, colour and styling from people who listen first. Relax, and leave looking like you, only better.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<style>:root{--bg:#F7F3EF;--ink:#231C1A;--muted:#7D6E68;--card:#FFFCFA;--accent:#9C6B4E;--accent-ink:#FFFFFF;--dark:#231C1A;--display:'Cormorant Garamond';--body:'Manrope'}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--body),system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+:root{--ease:cubic-bezier(.32,.72,0,1);--r:28px}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:3;opacity:.035;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.preview{position:relative;z-index:4;background:var(--dark);color:#fff;font-size:12.5px;text-align:center;padding:9px 16px;letter-spacing:.01em}
+.preview b{color:var(--accent)}
+.nav{position:sticky;top:14px;z-index:5;display:flex;justify-content:center;padding:0 16px}
+.nav-in{display:flex;align-items:center;gap:22px;padding:8px 8px 8px 20px;border-radius:999px;background:color-mix(in srgb,var(--card) 72%,transparent);backdrop-filter:blur(18px) saturate(1.4);-webkit-backdrop-filter:blur(18px) saturate(1.4);box-shadow:0 0 0 1px color-mix(in srgb,var(--ink) 8%,transparent),0 18px 40px -24px color-mix(in srgb,var(--ink) 35%,transparent)}
+.brand{font-family:var(--display),serif;font-weight:700;font-size:17px;letter-spacing:-.01em;white-space:nowrap}
+.links{display:flex;gap:18px;font-size:14px;color:var(--muted)}
+.links a{transition:color .4s var(--ease)}.links a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:10px;border-radius:999px;padding:7px 7px 7px 18px;font-weight:600;font-size:15px;background:var(--accent);color:var(--accent-ink);transition:transform .5s var(--ease),box-shadow .5s var(--ease);white-space:nowrap}
+.btn:active{transform:scale(.98)}
+.btn .ic{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:color-mix(in srgb,var(--accent-ink) 14%,transparent);transition:transform .5s var(--ease)}
+.btn:hover .ic{transform:translate(3px,-2px) scale(1.05)}
+.btn.ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--ink) 18%,transparent)}
+.btn.ghost .ic{background:color-mix(in srgb,var(--ink) 8%,transparent)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:6px 14px;font-size:11px;text-transform:uppercase;letter-spacing:.2em;font-weight:600;color:var(--muted);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--ink) 12%,transparent)}
+.eyebrow i{width:6px;height:6px;border-radius:50%;background:var(--accent)}
+h1,h2,h3{font-family:var(--display),serif;letter-spacing:-.025em;line-height:1.02}
+h1{font-size:clamp(44px,7.4vw,92px);font-weight:800}
+h1 em,h2 em{font-style:italic;color:var(--accent)}
+h2{font-size:clamp(34px,4.6vw,58px);font-weight:700}
+.hero{padding:72px 0 96px}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+.lede{font-size:clamp(17px,1.6vw,19px);color:var(--muted);max-width:520px;margin:24px 0 34px}
+.ctas{display:flex;flex-wrap:wrap;gap:12px}
+.shell{padding:7px;border-radius:var(--r);background:color-mix(in srgb,var(--ink) 4%,transparent);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--ink) 7%,transparent)}
+.core{border-radius:calc(var(--r) - 7px);background:var(--card);box-shadow:inset 0 1px 0 rgba(255,255,255,.55),0 30px 60px -36px color-mix(in srgb,var(--ink) 40%,transparent);overflow:hidden}
+.visual{position:relative;aspect-ratio:4/5}
+.visual .core{position:absolute;inset:7px;background:radial-gradient(120% 90% at 20% 10%,color-mix(in srgb,var(--accent) 55%,var(--card)) 0%,transparent 55%),radial-gradient(90% 80% at 90% 100%,color-mix(in srgb,var(--accent) 35%,var(--dark)) 0%,transparent 60%),var(--dark);display:grid;place-items:center;color:color-mix(in srgb,var(--accent) 70%,#fff)}
+.visual .core img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.visual .big{opacity:.9}
+.chip{position:absolute;display:flex;align-items:center;gap:10px;padding:10px 14px 10px 10px;border-radius:18px;background:color-mix(in srgb,var(--card) 88%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);color:var(--ink);font-size:13.5px;box-shadow:0 20px 40px -22px rgba(0,0,0,.45);animation:float 7s var(--ease) infinite alternate}
+.chip .dot{width:34px;height:34px;border-radius:12px;display:grid;place-items:center;background:var(--accent);color:var(--accent-ink)}
+.chip b{display:block;font-size:14.5px}
+.chip small{color:var(--muted)}
+.c1{left:-26px;top:16%}.c2{right:-22px;bottom:18%;animation-delay:-3s}
+@keyframes float{to{transform:translateY(-10px)}}
+.strip{display:flex;flex-wrap:wrap;gap:12px 34px;margin-top:40px;color:var(--muted);font-size:14.5px}
+.strip span{display:inline-flex;align-items:center;gap:8px}.strip svg{color:var(--accent)}
+section{padding:110px 0}
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:46px;flex-wrap:wrap}
+.head p{color:var(--muted);max-width:420px}
+.bento{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
+.bento .shell:nth-child(1){grid-column:span 7}.bento .shell:nth-child(2){grid-column:span 5}
+.bento .shell:nth-child(3),.bento .shell:nth-child(4),.bento .shell:nth-child(5){grid-column:span 4}
+.bento .shell:nth-child(6){grid-column:span 12}
+.svc{padding:30px;height:100%;display:flex;flex-direction:column;gap:12px}
+.svc .ico{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:color-mix(in srgb,var(--accent) 14%,transparent);color:var(--accent)}
+.svc h3{font-size:24px;font-weight:700}
+.svc p{color:var(--muted)}
+.svc .price{margin-top:auto;font-weight:600;font-size:14px;color:var(--ink)}
+.sample{font-size:12.5px;color:var(--muted);margin-top:14px}
+.dark{background:var(--dark);color:#F4F1EC}
+.dark .eyebrow{color:#bdb6ab;box-shadow:inset 0 0 0 1px rgba(255,255,255,.14)}
+.dark p{color:#bdb6ab}
+.rating{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.score{font-family:var(--display),serif;font-size:clamp(84px,12vw,150px);font-weight:800;line-height:.9;letter-spacing:-.04em}
+.stars{display:flex;gap:4px;color:var(--accent);margin:14px 0}
+.stars svg{fill:currentColor}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.step{padding:30px}.step .n{font-family:var(--display),serif;font-size:44px;font-weight:800;color:var(--accent);line-height:1}
+.step h3{font-size:22px;margin:14px 0 8px}.step p{color:var(--muted)}
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px}
+.info{padding:34px;display:flex;flex-direction:column;gap:20px}
+.info a,.info div{display:flex;gap:14px;align-items:flex-start}
+.info svg{color:var(--accent);flex:none;margin-top:3px}
+.info small{display:block;color:var(--muted);font-size:13px}
+.map{border:0;width:100%;height:220px;border-radius:18px;filter:grayscale(.2)}
+form{padding:34px;display:grid;gap:14px}
+label{font-size:13px;font-weight:600;display:grid;gap:7px}
+input,textarea{font:inherit;padding:14px 16px;border-radius:14px;border:0;background:color-mix(in srgb,var(--ink) 5%,transparent);color:var(--ink);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--ink) 8%,transparent);transition:box-shadow .4s var(--ease)}
+input:focus,textarea:focus{outline:0;box-shadow:inset 0 0 0 2px var(--accent)}
+textarea{min-height:120px;resize:vertical}
+footer{padding:46px 0 120px;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.callbar{position:fixed;left:12px;right:12px;bottom:12px;z-index:5;display:none}
+.callbar .btn{width:100%;justify-content:space-between;padding:8px 8px 8px 22px;box-shadow:0 20px 40px -18px rgba(0,0,0,.5)}
+.reveal{opacity:0;transform:translateY(36px);filter:blur(6px);transition:opacity .9s var(--ease),transform .9s var(--ease),filter .9s var(--ease)}
+.reveal.in{opacity:1;transform:none;filter:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;filter:none}.chip{animation:none}}
+@media (max-width:900px){
+ .links{display:none}
+ .hero{padding:40px 0 64px}
+ .hero-grid,.rating,.contact-grid{grid-template-columns:1fr;gap:40px}
+ .visual{max-width:440px;width:100%;margin:0 auto}
+ .c1{left:8px}.c2{right:8px}
+ .bento .shell:nth-child(n){grid-column:span 12}
+ .steps{grid-template-columns:1fr}
+ section{padding:72px 0}
+ .wrap{padding:0 16px}
+ .callbar{display:block}
+ .nav-in{gap:12px;padding-left:16px}
+ .nav .btn{display:none}
+}
+</style></head>
+<body>
+<div class="preview"><b>Preview</b> built for Blush Studio by Groundwork. Not live yet; your details, photos and wording go in before launch.</div>
+<nav class="nav"><div class="nav-in"><a class="brand" href="#top">Blush Studio</a>
+ <div class="links"><a href="#services">Services</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a></div>
+ <a class="btn" href="tel:+61480113938">Call now <span class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span></a></div></nav>
+<header class="hero" id="top"><div class="wrap hero-grid">
+ <div class="reveal"><span class="eyebrow"><i></i>Hair salon · Ringwood</span>
+  <h1 style="margin-top:22px">Great hair,<br><em>every visit.</em></h1><p class="lede">Cuts, colour and styling from people who listen first. Relax, and leave looking like you, only better.</p>
+  <div class="ctas"><a class="btn" href="#contact">Book an appointment <span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></a>
+   <a class="btn ghost" href="tel:+61480113938">0480 113 938 <span class="ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span></a></div>
+  <div class="strip"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg> 4.5★ from 8 Google reviews</span><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg> In business since 2022</span><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg> Ringwood &amp; surrounds</span><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.2 4.2L19 7"/></svg> Locally owned</span></div></div>
+ <div class="visual shell reveal"><div class="core"><span class="big"><svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="7" r="2.5"/><circle cx="6" cy="17" r="2.5"/><path d="M8 8.5 20 18M8 15.5 20 6"/></svg></span></div><div class="chip c1"><span class="dot"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg></span><div><b>4.5 on Google</b><small>8 reviews</small></div></div><div class="chip c2"><span class="dot"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span><div><b>0480 113 938</b><small>Tap to call</small></div></div></div>
+</div></header>
+<section id="services"><div class="wrap">
+ <div class="head reveal"><div><span class="eyebrow"><i></i>Services</span><h2 style="margin-top:18px">Hair you'll<br><em>love wearing.</em></h2></div>
+  <p>Straightforward service from a local business that picks up the phone.</p></div>
+ <div class="bento"><div class="shell reveal"><div class="core svc"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="7" r="2.5"/><circle cx="6" cy="17" r="2.5"/><path d="M8 8.5 20 18M8 15.5 20 6"/></svg></span><h3>Cut &amp; style</h3><p>Wash, cut and blow-dry.</p><span class="price">from $55</span></div></div><div class="shell reveal"><div class="core svc"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.2 4.2L19 7"/></svg></span><h3>Colour</h3><p>Tints, toners and root touch-ups.</p><span class="price">from $90</span></div></div><div class="shell reveal"><div class="core svc"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.2 4.2L19 7"/></svg></span><h3>Balayage &amp; foils</h3><p>Lived-in colour, done carefully.</p><span class="price">from $180</span></div></div><div class="shell reveal"><div class="core svc"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.2 4.2L19 7"/></svg></span><h3>Blow-dry</h3><p>Smooth, volume or waves.</p><span class="price">from $45</span></div></div><div class="shell reveal"><div class="core svc"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.2 4.2L19 7"/></svg></span><h3>Treatments</h3><p>Repair and shine.</p><span class="price">from $30</span></div></div><div class="shell reveal"><div class="core svc"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.2 4.2L19 7"/></svg></span><h3>Bridal &amp; events</h3><p>Trials and on-the-day styling.</p><span class="price">on request</span></div></div></div><p class="sample">Sample prices: we&#x27;ll use yours</p>
+</div></section>
+
+<section class="dark" id="reviews"><div class="wrap rating">
+ <div class="reveal"><span class="eyebrow"><i></i>What locals say</span>
+  <div class="score" style="margin-top:22px">4.5</div><div class="stars"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg></div>
+  <p>From 8 reviews on Google.</p></div>
+ <div class="reveal"><h2>Trusted around Ringwood.<br><em>Ask the neighbours.</em></h2>
+  <p style="margin:18px 0 28px">Every review is from a real customer on Google. Have a read before you call.</p>
+  <a class="btn" href="https://maps.google.com/?cid=13056387768410920002&amp;g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener">Read the reviews <span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></a></div>
+</div></section>
+<section><div class="wrap">
+ <div class="head reveal"><div><span class="eyebrow"><i></i>How it works</span><h2 style="margin-top:18px">Simple from<br><em>start to finish.</em></h2></div></div>
+ <div class="steps"><div class="shell reveal"><div class="core step"><div class="n">01</div><h3>Get in touch</h3><p>Tell us what you need.</p></div></div><div class="shell reveal"><div class="core step"><div class="n">02</div><h3>Clear quote</h3><p>No surprises on the bill.</p></div></div><div class="shell reveal"><div class="core step"><div class="n">03</div><h3>Done right</h3><p>Same high standard every time.</p></div></div></div></div></section>
+<section id="contact"><div class="wrap contact-grid">
+ <div class="shell reveal"><div class="core info">
+  <span class="eyebrow" style="align-self:flex-start"><i></i>Get in touch</span>
+  <a href="tel:+61480113938"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span><b>0480 113 938</b><small>Call or text Belinda</small></span></a>
+  <div><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span><b>Ringwood &amp; surrounds</b><small>Service area</small></span></div>
+  <iframe class="map" loading="lazy" title="Map" src="https://www.google.com/maps?q=Blush+Studio+Ringwood&output=embed"></iframe>
+ </div></div>
+ <div class="shell reveal"><form class="core" style="padding:34px">
+  <h2 style="font-size:34px">Send a message</h2>
+  <label>Name<input required autocomplete="name"></label>
+  <label>Phone<input required type="tel" autocomplete="tel"></label>
+  <label>How can we help?<textarea required></textarea></label>
+  <button class="btn" type="submit" style="border:0;cursor:pointer;justify-self:start">Send <span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></button>
+ </form></div>
+</div></section>
+<footer><div class="wrap"><span>© Blush Studio</span><span>Website preview by Groundwork</span></div></footer>
+<div class="callbar"><a class="btn" href="tel:+61480113938">Call 0480 113 938 <span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span></a></div>
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%4)*80+'ms';io.observe(el)});
+document.querySelector('form')?.addEventListener('submit',e=>{e.preventDefault();e.target.innerHTML='<h3>Thanks, that\'s through.</h3><p>On the live site this lands straight in your inbox and phone.</p>'});
+</script>
+</body></html>
