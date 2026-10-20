@@ -337,6 +337,10 @@ const go = document.getElementById("go"), goTxt = document.getElementById("goTxt
       liveTxt = document.getElementById("liveTxt"), timer = document.getElementById("timer"), mute = document.getElementById("mute");
 let vapi = null, active = false, starting = false, t0 = 0, tick = 0, muted = false;
 
+function errText(e) {  // short reason shown to the visitor so problems can be diagnosed
+  try { return String(e?.error?.message || e?.errorMsg || e?.message || e?.error || e?.type || JSON.stringify(e)).slice(0, 90); }
+  catch (_) { return "unknown error"; }
+}
 function bubble(role, text) {
   if (hint) hint.remove();
   const last = chat.lastElementChild;
@@ -373,15 +377,20 @@ go.addEventListener("click", async () => {
         if (m.type === "speech-update" && m.role === "user") userTalking = m.status === "started";
       });
       vapi.on("error", e => {
-        const s = JSON.stringify(e || "");
-        setIdle(/permission|NotAllowed|denied/i.test(s) ? "Microphone blocked. Allow it in your browser settings, then try again." : "The line dropped. Tap to call again.");
         console.error(e);
+        const s = JSON.stringify(e || "");
+        if (active && !/ended|ejected|left|disconnected/i.test(s)) return;  // non-fatal hiccup during a live call: keep talking
+        setIdle(/permission|NotAllowed|denied/i.test(s)
+          ? "Microphone blocked. Click the lock icon next to the web address, allow the microphone, then try again."
+          : "The line dropped. Tap to call again. (" + errText(e) + ")");
       });
     }
     await vapi.start("7fdb9a19-274d-49c7-9ea8-89a2e7362b3a", {variableValues: {business: biz, trade, town: town || "your area", owner: first || "the owner"}});
   } catch (e) {
     console.error(e);
-    setIdle(/NotAllowed|permission|denied/i.test(String(e)) ? "Microphone blocked. Allow it in your browser settings, then try again." : "Couldn't connect just now. Please try again in a moment.");
+    setIdle(/NotAllowed|permission|denied/i.test(String(e) + JSON.stringify(e || ""))
+      ? "Microphone blocked. Click the lock icon next to the web address, allow the microphone, then try again."
+      : "Couldn't connect just now. Please try again in a moment. (" + errText(e) + ")");
   }
 });
 mute.addEventListener("click", () => { if (!vapi) return; muted = !muted; vapi.setMuted(muted); mute.classList.toggle("on", muted); });
