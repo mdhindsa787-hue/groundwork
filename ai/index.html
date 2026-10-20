@@ -109,6 +109,13 @@ document.querySelectorAll(".biz").forEach(e => e.textContent = biz);
 document.querySelectorAll(".trade").forEach(e => e.textContent = trade);
 if (town) document.querySelectorAll(".town").forEach(e => e.textContent = town);
 if (first) document.querySelectorAll(".first").forEach(e => e.textContent = first);
+const salon = /hair|barber|beauty|nail|salon/i.test(trade);
+if (salon) {
+  document.querySelector("h1").innerHTML = 'Never miss another booking, <em class="first"></em>.';
+  document.querySelector("h1 .first").textContent = first || "legend";
+  document.querySelector(".lede").innerHTML = 'Every call you can\'t answer is a client booking with the next salon on Google. This receptionist picks up as <b class="biz"></b> 24/7, takes their name, number and the service they want, and texts it straight to you.';
+  document.querySelector(".lede .biz").textContent = biz;
+}
 document.title = biz + " · AI receptionist demo";
 
 const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), {threshold: .12});
