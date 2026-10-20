@@ -110,7 +110,7 @@ h2{font-weight:600;font-size:clamp(34px,4.6vw,58px);line-height:1.02;letter-spac
 .reply ol li{counter-increment:s;display:flex;gap:12px;color:var(--muted);font-size:14.5px;line-height:1.5}
 .reply ol li::before{content:counter(s);flex:0 0 24px;height:24px;border-radius:50%;display:grid;place-items:center;font-size:12px;font-weight:600;color:#111;background:var(--gold);margin-top:1px}
 .who .core{padding:40px 36px;display:flex;gap:24px;align-items:flex-start}
-.who .me{flex:0 0 56px;height:56px;border-radius:50%;display:grid;place-items:center;font-size:22px;font-weight:600;color:#111;background:radial-gradient(circle at 32% 28%,var(--gold2),var(--gold) 58%,#9A6A16)}
+.who .me{flex:none;width:56px;height:56px;border-radius:50%;display:grid;place-items:center;font-size:22px;font-weight:600;color:#111;background:radial-gradient(circle at 32% 28%,var(--gold2),var(--gold) 58%,#9A6A16)}
 .who h3{font-size:24px;font-weight:600;letter-spacing:-.02em;margin:12px 0 10px}
 .who p{color:var(--muted);font-size:16px;max-width:38em;margin-top:14px}.who p+p{margin-top:10px}
 .faq{display:grid;gap:12px;max-width:820px}
@@ -153,9 +153,9 @@ h1.rise{animation-delay:.06s}.lede.rise{animation-delay:.14s}.herobtn.rise{anima
   <div>
    <span class="eyebrow rise"><i></i>AI receptionist for <span class="tradeP">tradies</span></span>
    <h1 class="rise d1"><span class="h1a">Never miss another job,</span> <span class="serif first">mate</span>.</h1>
-   <p class="lede rise d2"><span class="ledeA">Every call you can't answer is a customer ringing the next <span class="trade">tradie</span> on Google.</span> This receptionist picks up as <b class="biz">your business</b>, day or night, takes the details and texts them straight to you.</p>
+   <p class="lede rise d2"><span class="ledeA">Calls you can't answer often end up with the next <span class="trade">tradie</span> on Google.</span> This receptionist picks up as <b class="biz">your business</b>, day or night, takes the details and texts them straight to you.</p>
    <a class="herobtn rise" href="#demo">Hear it answer a call ↓</a>
-   <div class="ticks rise d3"><span>Answers 24/7</span><span>Natural, friendly voice</span><span class="tk3">Every job texted to you</span></div>
+   <div class="ticks rise d3"><span>Answers missed calls 24/7</span><span>Natural, friendly voice</span><span class="tk3">Every job texted to you</span></div>
   </div>
 
   <div class="phone rise d2" id="demo"><div class="bezel"><div class="core">
@@ -202,7 +202,7 @@ h1.rise{animation-delay:.06s}.lede.rise{animation-delay:.14s}.herobtn.rise{anima
  <section class="block maths">
   <div class="bezel reveal"><div class="core">
    <span class="eyebrow">The maths</span>
-   <div class="big" style="margin-top:22px">One saved <span class="serif mathsWord">job</span> a month<br>pays for it.</div>
+   <div class="big mathsBig" style="margin-top:22px">One saved <span class="serif mathsWord">job</span> a month<br>pays for it.</div>
    <p class="mathsP">About the cost of one call-out a month. Catch one job you'd have missed and it's paid for.</p>
   </div></div>
  </section>
@@ -215,7 +215,7 @@ h1.rise{animation-delay:.06s}.lede.rise{animation-delay:.14s}.herobtn.rise{anima
     <ul class="list">
      <li><svg viewBox="0 0 24 24" fill="none" stroke="#30D158" stroke-width="2" stroke-linecap="round"><path d="M5 12l5 5L20 7"/></svg>Set up on your phone for you, keep your number</li>
      <li><svg viewBox="0 0 24 24" fill="none" stroke="#30D158" stroke-width="2" stroke-linecap="round"><path d="M5 12l5 5L20 7"/></svg>Answers the calls you miss, day or night, once divert is on</li>
-     <li><svg viewBox="0 0 24 24" fill="none" stroke="#30D158" stroke-width="2" stroke-linecap="round"><path d="M5 12l5 5L20 7"/></svg>Set up with your services, area and hours</li>
+     <li><svg viewBox="0 0 24 24" fill="none" stroke="#30D158" stroke-width="2" stroke-linecap="round"><path d="M5 12l5 5L20 7"/></svg><span class="plSetup">Set up with your services, area and hours</span></li>
      <li><svg viewBox="0 0 24 24" fill="none" stroke="#30D158" stroke-width="2" stroke-linecap="round"><path d="M5 12l5 5L20 7"/></svg>No lock-in contract, cancel any time</li>
      <li><svg viewBox="0 0 24 24" fill="none" stroke="#30D158" stroke-width="2" stroke-linecap="round"><path d="M5 12l5 5L20 7"/></svg>First payment only once it's live and you're happy</li>
     </ul>
@@ -223,7 +223,7 @@ h1.rise{animation-delay:.06s}.lede.rise{animation-delay:.14s}.herobtn.rise{anima
    <div class="reply"><p>Want it answering your phone this week?</p><div class="yes">Reply YES</div><p>to my text and I'll set it up for <b class="biz" style="color:var(--ink)">your business</b>. Takes about 10 minutes of your time.</p>
     <h4>When you reply YES:</h4>
     <ol>
-     <li>I ring you (about 10 minutes) to get your services, area, hours and what counts as urgent.</li>
+     <li class="yes1">I ring you (about 10 minutes) to get your services, area, hours and what counts as urgent.</li>
      <li>I set it up and you test it by ringing it yourself. Nothing changes on your phone yet.</li>
      <li>When you're happy, I walk you through turning on missed-call divert. One code turns it on, one turns it off.</li>
      <li>Your first $149 is only once it's live on your phone and you're happy. No lock-in: text me to stop and I'll help you switch the divert off.</li>
@@ -277,10 +277,13 @@ if (town) set(".notifBody", (salon ? "Jess" : "Sarah") + " from " + town + (salo
   : ". Hot water system leaking, wants it looked at today. Call back on 0491 570 156."));
 if (salon) {
   set(".h1a", "Never miss another booking,");
-  set(".ledeA", "Every call you can't answer is a client booking with the next salon on Google.");
+  set(".ledeA", "Calls you can't answer often end up booked with the next salon on Google.");
   set(".tk3", "Every booking texted to you");
   if (!town) set(".notifBody", "Jess from Kelso wants a cut and colour, Thursday after 3pm if possible. Call back on 0491 570 156.");
-  set(".afterA", "You get the booking.");
+  set(".afterA", "You get the enquiry.");
+  set(".plSetup", "Set up with your services and hours");
+  set(".yes1", "I ring you (about 10 minutes) to get your services, hours and how you like bookings handled.");
+  document.querySelector(".mathsBig").innerHTML = "Keep one regular client<br>and it pays for itself.";
   set(".afterSub", "After they hang up, the details are texted to your phone: who, which service and when suits them.");
   set("#hint", "Ring it like a client would. Ask for a cut and colour, ask when they're free, try to trip it up.");
   set(".faqEmQ", "Can it book into Fresha or Timely?");
@@ -294,11 +297,13 @@ const stay = /motel|hotel|motor inn|lodge|accommodation|b&b|bnb|caravan|cabin/i.
 if (stay) {
   set(".tradeP", "motels and accommodation"); set(".first", first || "there");
   set(".h1a", "Never miss another booking,");
-  set(".ledeA", "Every call you can't answer is a guest booking the next motel on Google.");
+  set(".ledeA", "Calls you can't answer often end up booked at the next motel on Google.");
   set(".tk3", "Every booking enquiry texted to you");
   set(".notifTitle", "New booking enquiry · " + biz);
   set(".notifBody", "Sarah from Armidale wants 2 nights from Friday, 2 adults, a queen room. Call back on 0491 570 156.");
-  set(".afterA", "You get the booking.");
+  set(".afterA", "You get the booking enquiry.");
+  set(".plSetup", "Set up with your rooms, rates policy and hours");
+  set(".yes1", "I ring you (about 10 minutes) to get your rooms, check-in times and how you like enquiries handled.");
   set(".afterSub", "After they hang up, the details are texted to your phone: who, which dates, how many guests and the room they want.");
   set("#hint", "Ring it like a guest would. Ask for a room this weekend, ask about breakfast, try to trip it up.");
   set(".faqEmQ", "Can it take bookings in my booking system?");
