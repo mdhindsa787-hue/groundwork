@@ -258,11 +258,12 @@ h1.rise{animation-delay:.06s}.lede.rise{animation-delay:.14s}.herobtn.rise{anima
 
 <script type="module">
 const q = new URLSearchParams(location.search);
+const P = window.GW || {};  // per-lead pages (/ai/<slug>/) carry their details here
 const clean = s => (s || "").replace(/[<>]/g, "").trim().slice(0, 80);
-const biz = clean(q.get("b")) || "your business";
-const trade = clean(q.get("t")) || "tradie";
-const town = clean(q.get("town"));
-const first = clean(q.get("n"));
+const biz = clean(q.get("b") || P.b) || "your business";
+const trade = clean(q.get("t") || P.t) || "tradie";
+const town = clean(q.get("town") || P.town);
+const first = clean(q.get("n") || P.n);
 const salon = /hair|barber|beauty|nail|salon/i.test(trade);
 const set = (sel, txt) => document.querySelectorAll(sel).forEach(e => e.textContent = txt);
 set(".biz", biz); set(".trade", trade); set(".tradeP", salon ? trade.replace(/s$/, "") + "s" : trade + "s");
