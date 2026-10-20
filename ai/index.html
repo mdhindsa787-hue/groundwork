@@ -291,6 +291,24 @@ if (salon) {
   set(".mathsWord", "booking");
   set(".mathsP", "About the cost of a couple of appointments a month. Keep one regular client who'd have booked elsewhere and it's paid for.");
 }
+const stay = /motel|hotel|motor inn|lodge|accommodation|b&b|bnb|caravan|cabin/i.test(trade + " " + biz);
+if (stay) {
+  set(".tradeP", "motels and accommodation"); set(".first", first || "there");
+  set(".h1a", "Never miss another booking,");
+  set(".ledeA", "Every call you can't answer is a guest booking the next motel on Google.");
+  set(".tk3", "Every booking enquiry texted to you");
+  set(".notifTitle", "New booking enquiry · " + biz);
+  set(".notifBody", "Sarah from Armidale wants 2 nights from Friday, 2 adults, a queen room. Call back on 0491 570 156.");
+  set(".afterA", "You get the booking.");
+  set(".afterSub", "After they hang up, the details are texted to your phone: who, which dates, how many guests and the room they want.");
+  set("#hint", "Ring it like a guest would. Ask for a room this weekend, ask about breakfast, try to trip it up.");
+  set(".faqEmQ", "Can it take bookings in my booking system?");
+  set(".faqEmA", "Not directly. It takes the guest's dates and details and texts them to you, so you confirm availability and the rate yourself.");
+  set(".s1", "When you're with a guest, cleaning rooms or out, the call rolls over to your receptionist. Same number, nothing new for guests.");
+  set(".s2", "Friendly and unhurried. Gets their name, number, dates, number of guests and room type. Never confirms bookings or quotes rates.");
+  set(".mathsWord", "booking");
+  set(".mathsP", "About the cost of one or two room-nights a month. Catch one booking that would have gone elsewhere and it's paid for.");
+}
 
 const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), {threshold: .12});
 document.querySelectorAll(".reveal").forEach(el => io.observe(el));
