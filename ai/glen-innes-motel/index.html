@@ -297,7 +297,7 @@ if (salon) {
 }
 const stay = /motel|hotel|motor inn|lodge|accommodation|b&b|bnb|caravan|cabin/i.test(trade + " " + biz);
 if (stay) {
-  set(".tradeP", "motels and accommodation"); set(".first", first || "there");
+  set(".tradeP", "motels and accommodation"); document.querySelectorAll(".first").forEach(e=>{const p=e.previousSibling; if(!first){e.remove(); if(p&&p.nodeType===3) p.textContent=p.textContent.replace(/,\s*$/,"");} else e.textContent=first});
   set(".h1a", "Never miss another booking,");
   set(".ledeA", "Calls you can't answer often end up booked at the next motel on Google.");
   set(".tk3", "Every booking enquiry texted to you");
