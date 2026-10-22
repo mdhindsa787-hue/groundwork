@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>Google review card</title>
+<script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
+<style>
+:root{--ink:#15171b;--muted:#5d6470;--accent:#1f6f4a;--bg:#f4f2ee;--card:#fff;--line:#e3e1dc}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--ink:#eef0f3;--muted:#a3a9b6;--bg:#111317;--card:#1a1d22;--line:#2b2f37;--accent:#5fd39a}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif}
+.wrap{max-width:560px;margin:0 auto;padding:18px 16px 60px}
+.trust{font-size:13px;color:var(--muted);margin-bottom:16px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;margin:14px 0}
+h2{font-size:17px;margin:0 0 8px}.btn{display:inline-block;background:var(--accent);color:#fff;border:0;border-radius:999px;padding:10px 16px;font-weight:700;cursor:pointer;margin:6px 6px 0 0;text-decoration:none;font-size:15px}
+.btn.ghost{background:transparent;color:var(--accent);border:1.5px solid var(--accent)}
+.card{background:#fff;color:#15171b;border-radius:18px;padding:26px 22px;text-align:center;border:1px solid #e6e6e6}
+.card .biz{font-size:24px;font-weight:800;margin:0 0 6px}.card .ask{font-size:17px;margin:0 0 14px}
+.card img{width:200px;height:200px;image-rendering:pixelated}.card .small{font-size:13px;color:#5d6470;margin-top:10px}
+.mono{font-family:ui-monospace,Menlo,monospace;font-size:14px;background:var(--bg);padding:2px 6px;border-radius:6px}
+details{margin:8px 0}summary{cursor:pointer;font-weight:600}
+@media print{.noprint{display:none}body{background:#fff}.card{border:2px solid #ddd}}
+</style></head><body><div class="wrap">
+<div class="trust noprint">Made for <b id="t-biz">your business</b> by Manraj, sole trader, Dubbo NSW · 0412 103 528 · Not affiliated with Google.</div>
+<div id="err" class="box" style="display:none">This link has expired. Text Manraj on 0412 103 528.</div>
+<div id="main">
+<div class="box noprint"><h2>1. Text this to customers after a job</h2>
+<p id="cust" style="margin:0"></p>
+<button class="btn" id="copy">Copy text</button><button class="btn ghost" id="share">Share</button></div>
+<div class="box noprint"><h2>2. Test it</h2><p style="margin:0 0 6px">Opens your Google review page, so you can see what customers see.</p>
+<a class="btn" id="test" target="_blank" rel="noopener">Open review page</a></div>
+<div class="box"><h2 class="noprint">3. Card for the counter, ute or invoice</h2>
+<div class="card"><div class="biz" id="c-biz"></div><div class="ask">How did we go? Scan to leave an honest Google review.</div>
+<div id="qr"></div><div class="small">Point your phone camera at the code. Thanks for your support.</div></div>
+<div class="noprint"><button class="btn" onclick="print()">Print / save PDF</button><a class="btn ghost" id="png" download="review-qr.png">Save QR image</a></div></div>
+<div class="box noprint" id="pay" style="display:none"><h2>Keeping it?</h2>
+<p style="margin:0">$29 once, only if you keep it. PayID <span class="mono">0412 103 528</span>, reference <span class="mono" id="ref"></span>.</p>
+<button class="btn ghost" id="cp1">Copy PayID</button><button class="btn ghost" id="cp2">Copy reference</button>
+<p style="font-size:13px;color:var(--muted)">If you don't keep it, nothing changes. It's Google's own review link.</p></div>
+<div class="box noprint"><h2>Questions</h2>
+<details><summary>Can I do this myself?</summary><p>Yes, Google Business Profile has an "Ask for reviews" option. This just saves the setup and gives you a ready card and text.</p></details>
+<details><summary>Is it allowed?</summary><p>Yes. It asks every customer for an honest review, with no rewards or filtering, which is how Google wants it done.</p></details>
+<details><summary>Who are you?</summary><p>Manraj, a sole trader in Dubbo NSW helping regional businesses get more Google reviews. Text or call 0412 103 528.</p></details>
+</div></div>
+<script>
+const k=new URLSearchParams(location.search).get('k')||'';
+fetch('k/'+encodeURIComponent(k)+'.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw 0;return r.json()}).then(d=>{
+ for(const id of ['t-biz','c-biz'])document.getElementById(id).textContent=d.n;document.title=d.n+' · review card';
+ const msg='Thanks for choosing '+d.n+'. How did we go? If you\'ve got a minute, an honest Google review really helps us: '+d.u;
+ document.getElementById('cust').textContent=msg;document.getElementById('test').href=d.u;
+ document.getElementById('copy').onclick=()=>navigator.clipboard.writeText(msg);
+ document.getElementById('share').onclick=()=>navigator.share?navigator.share({text:msg}):navigator.clipboard.writeText(msg);
+ const q=qrcode(0,'M');q.addData(d.u);q.make();document.getElementById('qr').innerHTML=q.createImgTag(7,0);
+ document.getElementById('png').href=q.createDataURL(10,4);
+ if(d.a){document.getElementById('pay').style.display='block';document.getElementById('ref').textContent=k;
+  document.getElementById('cp1').onclick=()=>navigator.clipboard.writeText('0412103528');document.getElementById('cp2').onclick=()=>navigator.clipboard.writeText(k)}
+}).catch(()=>{document.getElementById('main').style.display='none';document.getElementById('err').style.display='block'});
+</script></div></body></html>
