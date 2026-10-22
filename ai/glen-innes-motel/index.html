@@ -278,7 +278,7 @@ if (town) set(".notifBody", (salon ? "Jess" : "Sarah") + " from " + town + (salo
   ? " wants a cut and colour, Thursday after 3pm if possible. Call back on 0491 570 156."
   : ". Hot water system leaking, wants it looked at today. Call back on 0491 570 156."));
 if (salon) {
-  set(".h1a", "Never miss another booking,");
+  set(".h1a", "Never miss another booking.");
   set(".ledeA", "Calls you can't answer often end up booked with the next salon on Google.");
   set(".tk3", "Every booking texted to you");
   if (!town) set(".notifBody", "Jess from Kelso wants a cut and colour, Thursday after 3pm if possible. Call back on 0491 570 156.");
@@ -298,7 +298,7 @@ if (salon) {
 const stay = /motel|hotel|motor inn|lodge|accommodation|b&b|bnb|caravan|cabin/i.test(trade + " " + biz);
 if (stay) {
   set(".tradeP", "motels and accommodation"); if(!first){document.querySelectorAll(".first").forEach(e=>e.remove());document.querySelectorAll("h1 .h1a").forEach(e=>e.textContent=e.textContent.replace(/,\s*$/,"."));const h=document.querySelector("h1");h.innerHTML=h.innerHTML.replace(/<\/span>\s*\.\s*$/,"</span>")}else set(".first",first);
-  set(".h1a", "Never miss another booking,");
+  set(".h1a", "Never miss another booking.");
   set(".ledeA", "Calls you can't answer often end up booked at the next motel on Google.");
   set(".tk3", "Every booking enquiry texted to you");
   set(".notifTitle", "New booking enquiry · " + biz);
