@@ -356,7 +356,7 @@ go.addEventListener("click", async () => {
   if (active || starting) { vapi && vapi.stop(); setIdle("That's what your customers would hear."); return; }
   starting = true; goTxt.textContent = "Connecting…"; note.textContent = "Tap Allow when your phone asks for the microphone.";
   try {
-    const mod = await import("https://cdn.jsdelivr.net/npm/@vapi-ai/web@2.7.1/+esm").catch(() => null);  // loaded only on tap, so no mic prompt before the visitor asks
+    const mod = await import("https://esm.sh/@vapi-ai/web@2.7.1?deps=@daily-co/daily-js@0.93.0").catch(() => null) || await import("https://cdn.jsdelivr.net/npm/@vapi-ai/web@2.7.1/+esm").catch(() => null);  // loaded only on tap, so no mic prompt before the visitor asks
     if (!mod) throw new Error("sdk");
     const Vapi = mod.default?.default || mod.default || mod.Vapi;
     if (!vapi) {
