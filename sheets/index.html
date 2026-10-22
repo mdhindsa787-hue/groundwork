@@ -51,9 +51,9 @@ footer{padding:36px 0;color:var(--muted);font-size:14px;border-top:1px solid var
 <tr><td class="bad">2026-09-03</td><td class="bad">&nbsp;&nbsp;Oakridge Motors</td><td class="bad">AUD 563.5</td><td>Y</td></tr>
 <tr><td class="bad">9 Sep 2026</td><td class="bad">riverbend vets </td><td class="bad">AUD 640.5</td><td class="bad">yes</td></tr>
 <tr><td class="bad">22-08-26</td><td class="bad">summit physio </td><td class="bad">"2,257.5 "</td><td class="bad">yes</td></tr></table></div>
-<p class="muted" style="margin-top:10px">66 rows: 4 date formats, amounts stored as text, customers spelled up to 5 different ways, 5 duplicate invoices, 1 blank row.</p></div>
+<p class="muted" style="margin-top:10px">67 rows: 4 date formats, amounts stored as text, customer names with stray spaces and capitals (plus one typo), 5 repeated rows, 1 invoice number re-used with a different amount, 1 blank row.</p></div>
 <div class="card"><h3>After: a clean workbook that checks itself</h3>
-<ul><li>Real dates and numbers, so sorting and totals work</li><li>Customer names merged; Paid/Unpaid dropdown</li><li>Duplicates moved to their own sheet, with the reason</li><li>Live summary by customer and month (SUMIFS), which updates as rows are added</li><li><b>Checks sheet:</b> rows reconcile (66 − 1 blank − 5 duplicates = 60) and totals match, <span class="ok">all OK</span></li></ul>
+<ul><li>Real dates and numbers, so sorting and totals work</li><li>Names tidied; Paid / Unpaid / Unknown dropdown (a blank is never assumed unpaid)</li><li>Repeated rows moved to their own sheet. The re-used invoice number and the likely name typo are <b>flagged for you to decide</b>, not silently changed</li><li>Live summary by customer and month that includes rows you add later</li><li><b>Checks sheet:</b> every row and every dollar reconciles to the original export (67 rows = 60 kept + 5 repeats + 1 for review + 1 blank), and it flags a repeated invoice number or a customer missing from the summary. <span class="ok">All OK</span> when tested in Microsoft Excel</li></ul>
 <p style="margin-top:10px"><a href="sample-before.csv" download>Download the before (.csv)</a> · <a href="sample-after.xlsx" download>Download the after (.xlsx)</a></p></div>
 </div>
 </section>
@@ -63,7 +63,7 @@ footer{padding:36px 0;color:var(--muted);font-size:14px;border-top:1px solid var
 <div class="grid">
 <div class="card"><h3>Quick fix</h3><div class="price">A$40</div><p class="muted">One problem: a broken formula or lookup, a #REF/#N/A error, conditional formatting, a dropdown, a print layout.</p></div>
 <div class="card"><h3>Clean-up + summary</h3><div class="price">A$90</div><p class="muted">One messy export or list (up to ~5,000 rows): cleaned, de-duplicated, a live summary and a checks sheet, like the example.</p></div>
-<div class="card"><h3>Automate it</h3><div class="price">from A$150</div><p class="muted">Google Apps Script, an Excel macro or a small script that does a repeating job for you. I quote it once I've seen the task.</p></div>
+<div class="card"><h3>Automate it</h3><div class="price">from A$170</div><p class="muted">Google Apps Script, an Excel macro or a small script that does a repeating job for you. I quote it once I've seen the task.</p></div>
 </div>
 <p class="muted" style="margin-top:14px">You get a fixed quote before any work starts. If the job turns out bigger, I tell you before doing anything extra.</p>
 </section>
@@ -75,9 +75,10 @@ footer{padding:36px 0;color:var(--muted);font-size:14px;border-top:1px solid var
 <li><b>Fixed quote</b> in writing: what will change, the price, and when you'll get it (most small fixes within 1–2 days).</li>
 <li><b>You check a preview</b> (screenshots or a read-only view) before you pay. When you've paid, you get the full file. It's yours to keep and change.</li>
 <li><b>Revisions:</b> 2 rounds of changes within the agreed scope are included. If I can't deliver what we agreed, you don't pay.</li>
-<li><b>Privacy:</b> I only use your file for your job, never share it, and delete my copy 30 days after handover (or sooner if you ask).</li>
+<li><b>Privacy:</b> I only use your file for your job and delete my copy 30 days after handover (or sooner if you ask). I use an AI coding assistant (Anthropic's Claude) to help with the work, so your file is processed by that service. If that's not OK, remove sensitive columns or send dummy rows with the same layout, and tell me.</li>
+<li><b>I test before you see it:</b> formulas are recalculated in Excel and checked against your original totals. Google Apps Script and Excel macros need a quick test run on your side, and I'll walk you through it.</li>
 </ul>
-<p class="muted" style="margin-top:10px">Not included: payroll, tax or accounting advice, or anything that needs a qualified accountant. I fix the spreadsheet, not the numbers in your books.</p>
+<p class="muted" style="margin-top:10px">Not included: payroll, tax or accounting advice; unlocking password-protected files; Power BI / Power Pivot / DAX; anything that needs live logins to your systems. I fix the spreadsheet, not the numbers in your books.</p>
 </section>
 
 <section>
@@ -86,5 +87,5 @@ footer{padding:36px 0;color:var(--muted);font-size:14px;border-top:1px solid var
 <a class="btn" href="mailto:m.dhindsa787@gmail.com?subject=Spreadsheet%20fix%20quote">m.dhindsa787@gmail.com</a>
 </section>
 </div>
-<footer><div class="wrap">Groundwork · Manraj · NSW, Australia · m.dhindsa787@gmail.com · Example data on this page is made up.</div></footer>
+<footer><div class="wrap">Groundwork Spreadsheet Fixes · run by Manraj (NSW, Australia) · m.dhindsa787@gmail.com · Example data on this page is made up.</div></footer>
 </body></html>
