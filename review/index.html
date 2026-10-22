@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>Review card</title>
+<script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
+<style>
+:root{--ink:#14161a;--muted:#5d6470;--accent:#1f6f4a;--bg:#f4f2ee;--card:#fff;--line:#e3e1dc}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#101215;--card:#fff}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif}
+.wrap{max-width:900px;margin:0 auto;padding:24px 16px 60px}
+.note{background:#fffbe6;border:1px solid #f0e2a8;border-radius:12px;padding:12px 14px;margin-bottom:18px;color:#5a4a00;font-size:14px}
+.card{background:var(--card);color:#14161a;border-radius:22px;box-shadow:0 30px 60px -30px rgba(0,0,0,.35);width:100%;max-width:520px;margin:0 auto;padding:36px 32px;text-align:center;border:1px solid var(--line)}
+.stars{font-size:30px;letter-spacing:4px;color:#f5b301}.biz{font-size:28px;font-weight:800;margin:6px 0 2px;letter-spacing:-.01em}
+.ask{font-size:19px;margin:8px 0 18px;color:#2b2f36}.qr{display:inline-block;padding:14px;background:#fff;border-radius:16px;border:1px solid #eee}
+.qr img{width:220px;height:220px;image-rendering:pixelated}.how{font-size:14px;color:#5d6470;margin-top:14px}
+.text{max-width:520px;margin:22px auto 0;background:var(--card);color:#14161a;border-radius:16px;padding:16px 18px;border:1px solid var(--line);font-size:15px}
+.btn{display:inline-block;margin:18px auto 0;background:var(--accent);color:#fff;border:0;border-radius:999px;padding:11px 20px;font-weight:700;cursor:pointer}
+.c{text-align:center}
+@media print{.noprint{display:none}body{background:#fff}.card{box-shadow:none;border:2px solid #ddd}}
+</style></head><body><div class="wrap">
+<div class="note noprint" id="demo">Preview: the QR code points to your Google page for now. Once you send your Google review link, it takes customers straight to the review box.</div>
+<div class="card">
+ <div class="stars">★★★★★</div>
+ <div class="biz" id="biz">Your Business</div>
+ <div class="ask">Happy with the job? A quick Google review really helps a local business.</div>
+ <div class="qr"><div id="qr"></div></div>
+ <div class="how">Point your phone camera at the code, tap the link, pick your stars. Takes 10 seconds.</div>
+</div>
+<div class="text">
+ <b>Text to send happy customers after a job:</b><br>
+ <span id="sms">Hi [name], thanks for choosing us! If you were happy with the job, a quick Google review would mean a lot: [link]</span>
+</div>
+<div class="c noprint"><button class="btn" onclick="print()">Print / save as PDF</button></div>
+<p class="c noprint" style="color:var(--muted);font-size:13px;margin-top:22px">Made by Manraj at Groundwork · 0412 103 528</p>
+</div>
+<script>
+const p=new URLSearchParams(location.search);const biz=p.get('b')||'Your Business';
+const link=p.get('u')||('https://www.google.com/search?q='+encodeURIComponent(biz+' '+(p.get('t')||'')+' reviews'));
+document.getElementById('biz').textContent=biz;document.title=biz+' · review card';
+if(p.get('u'))document.getElementById('demo').remove();
+const q=qrcode(0,'M');q.addData(link);q.make();document.getElementById('qr').innerHTML=q.createImgTag(8,0);
+document.getElementById('sms').textContent="Hi [name], thanks for choosing "+biz+"! If you were happy with the job, a quick Google review would mean a lot: "+link;
+</script></body></html>
