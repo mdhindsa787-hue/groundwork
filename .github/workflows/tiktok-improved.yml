@@ -1,0 +1,30 @@
+name: Build improved licensed phonk car edits
+on:
+  push:
+    branches: [tiktok-assets]
+    paths:
+      - 'tiktok-media/2026-11-01/improved_build.py'
+      - '.github/workflows/tiktok-improved.yml'
+permissions:
+  contents: write
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: tiktok-assets
+          persist-credentials: true
+      - name: Install rendering dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg
+      - name: Render three reviewed format prototypes
+        run: python3 tiktok-media/2026-11-01/improved_build.py
+      - name: Store MP4 outputs and music provenance on asset branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add tiktok-media/2026-11-01/improved
+          git diff --cached --quiet || (git commit -m "Build three licensed phonk automotive edits [skip ci]" && git push origin HEAD:tiktok-assets)
