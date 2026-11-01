@@ -1,0 +1,29 @@
+name: Build licensed TikTok car edits
+on:
+  push:
+    branches: [tiktok-assets]
+    paths:
+      - 'tiktok-media/2026-11-01/build.py'
+      - 'tiktok-media/2026-11-01/sources.json'
+      - '.github/workflows/tiktok-render.yml'
+permissions:
+  contents: write
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: tiktok-assets
+          persist-credentials: true
+      - name: Check FFmpeg
+        run: ffmpeg -hide_banner -version | head -1
+      - name: Render 10 distinct vertical videos from licensed footage
+        run: python3 tiktok-media/2026-11-01/build.py
+      - name: Publish edited videos to isolated public asset branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add tiktok-media/2026-11-01/clips/ tiktok-media/2026-11-01/batch.json
+          git diff --cached --quiet || (git commit -m "Add ten original short-form car montage edits [skip ci]" && git push origin HEAD:tiktok-assets)
