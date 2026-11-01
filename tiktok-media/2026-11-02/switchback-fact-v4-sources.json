@@ -1,0 +1,24 @@
+{
+  "candidate": "switchback-fact-v4",
+  "media_sha256": "4ca7b4b8dfed920e5826422ee470a3ba582724e21ae274fb742ff524cfff9d4b",
+  "duration_seconds": 9.6,
+  "reference_style": "Original edit using broad visible cues from one accessible public reference: moving cinematic car footage, monochrome contrast, large white/yellow kinetic type. No creator footage, script, sound, or identity copied.",
+  "visual_sources": [
+    {
+      "asset": "Car Travels on Scenic Mountain Road at Dusk (Pexels 40412888)",
+      "creator": "Andreas Berget",
+      "url": "https://www.pexels.com/video/car-travels-on-scenic-mountain-road-at-dusk-40412888/",
+      "license_url": "https://www.pexels.com/license/",
+      "license": "Pexels Free License; edited and cropped to portrait",
+      "checked_date": "2026-11-02"
+    }
+  ],
+  "audio": {
+    "asset": "Original synthetic score generated locally",
+    "source_sha256": "040b22d1cdf4e6e7c2fab652e62460d7f8ce464960c2e2a090c8b85469728e39",
+    "license": "Original generated WAV; no third-party recording or sample",
+    "owner_exact_media_review": "Sound fits; owner approved this exact MP4 for posting if every gate passes"
+  },
+  "fact_basis": "https://www.fhwa.dot.gov/safety/saferjourney1/library/pdf/ada.pdf; generalized schematic, not a measurement of the depicted road.",
+  "publication_note": "No brand/model identification or endorsement is claimed."
+}
