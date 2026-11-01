@@ -1,0 +1,26 @@
+{
+  "candidate": "rich-look-rich-life-v4c",
+  "media_sha256": "d9d133856578de37748f78c36dcdf47c594c57d95d4219a3c25cd78d43dd05a2",
+  "duration_seconds": 9.6,
+  "dimensions": "1080x1920",
+  "fps": 25,
+  "creative_summary": "Original money-psychology video: hypothetical $900 status purchase divided by $30 take-home per hour equals 30 work hours. Money, ego and obsession; not individualized financial advice.",
+  "visual_sources": [
+    {
+      "asset": "Original Blender scene, coin, status stage, stairs and doorway",
+      "creator": "Original local creation",
+      "license": "Original work for this project",
+      "source_url": null,
+      "checked_date": "2026-11-02"
+    }
+  ],
+  "audio": {
+    "voice": "Locally synthesized macOS Daniel en_GB voice",
+    "music_asset": "Original local score WAV",
+    "source_sha256": "040b22d1cdf4e6e7c2fab652e62460d7f8ce464960c2e2a090c8b85469728e39",
+    "license": "Original generated WAV, no third-party samples",
+    "owner_authorization": "User gave standing conditional authorization on 2026-11-02 to publish each video after it independently passes Black Team; exact hash is bound in the publisher allowlist."
+  },
+  "caption": "Before you buy the flex, count the hours: a hypothetical $900 purchase equals 30 work hours at $30 take-home per hour. Same-currency example. Ego sees the flex; obsession counts. #money #mindset #ego",
+  "publication_note": "Do not claim a trending sound or a guaranteed financial outcome."
+}
