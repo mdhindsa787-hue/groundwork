@@ -53,7 +53,7 @@ def fetch_sources():
                 if count > 90_000_000: raise RuntimeError("Input too large: " + key)
                 out.write(b)
         data = target.read_bytes()[:40]
-        if len(data)<100 or b"ftyp" not in data:
+        if len(data)<16 or b"ftyp" not in data:
             raise RuntimeError("Not an MP4: "+key)
         print("downloaded", key, target.stat().st_size)
     return p
