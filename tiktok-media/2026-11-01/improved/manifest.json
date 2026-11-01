@@ -1,0 +1,58 @@
+{
+  "music_license": "Pixabay Content License",
+  "music_page": "https://pixabay.com/music/phonk-phonk-music-slowed-phonk-480432/",
+  "note": "Licensed Pixabay phonk music, NOT official TikTok trending catalog sound; track may be Content ID registered",
+  "edits": [
+    {
+      "filename": "edit-01.mp4",
+      "caption": "No one is coming to build your future. #supercars #carsoftiktok #lockin #discipline",
+      "bytes": 4220396,
+      "music": "https://pixabay.com/music/phonk-phonk-music-slowed-phonk-480432/",
+      "video_sources": [
+        "lambo-road",
+        "black-car",
+        "lambo-wheel",
+        "yellow-hood",
+        "lambo-road",
+        "city-street",
+        "night-traffic",
+        "lambo-road"
+      ],
+      "status": "RENDERED_NOT_PUBLISHED"
+    },
+    {
+      "filename": "edit-02.mp4",
+      "caption": "Your future self is watching. #supercars #carsofinstagram #motivation #phonk",
+      "bytes": 3420318,
+      "music": "https://pixabay.com/music/phonk-phonk-music-slowed-phonk-480432/",
+      "video_sources": [
+        "lambo-wheel",
+        "yellow-hood",
+        "black-car",
+        "lambo-road",
+        "city-timelapse",
+        "yellow-hood",
+        "city-street",
+        "lambo-wheel"
+      ],
+      "status": "RENDERED_NOT_PUBLISHED"
+    },
+    {
+      "filename": "edit-03.mp4",
+      "caption": "For the ones who refuse to settle. #luxurycars #phonkedit #mindset #supercars",
+      "bytes": 3939651,
+      "music": "https://pixabay.com/music/phonk-phonk-music-slowed-phonk-480432/",
+      "video_sources": [
+        "black-car",
+        "city-street",
+        "lambo-road",
+        "yellow-hood",
+        "night-traffic",
+        "lambo-wheel",
+        "black-car",
+        "lambo-road"
+      ],
+      "status": "RENDERED_NOT_PUBLISHED"
+    }
+  ]
+}
