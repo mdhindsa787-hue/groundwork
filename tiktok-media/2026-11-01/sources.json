@@ -1,0 +1,42 @@
+{
+  "license": "Pexels License, free use and modifications, no attribution required; https://www.pexels.com/legal-pages/license/",
+  "reference_style": "Luxury car motivation / lock-in; original account @visionproof.app",
+  "sources": [
+    {
+      "id": "lambo-wheel",
+      "url": "https://videos.pexels.com/video-files/20153915/20153915-hd_1920_1080_24fps.mp4",
+      "page": "https://www.pexels.com/video/the-wheels-of-a-sports-car-in-the-sun-20153915/"
+    },
+    {
+      "id": "lambo-road",
+      "url": "https://videos.pexels.com/video-files/7727416/7727416-hd_1920_1080_25fps.mp4",
+      "page": "https://www.pexels.com/video/a-lamborghini-car-on-the-road-7727416/"
+    },
+    {
+      "id": "night-traffic",
+      "url": "https://videos.pexels.com/video-files/10433645/10433645-hd_1920_1080_25fps.mp4",
+      "page": "https://www.pexels.com/video/night-traffic-on-junction-in-city-10433645/"
+    },
+    {
+      "id": "city-timelapse",
+      "url": "https://videos.pexels.com/video-files/3727447/3727447-hd_1920_1080_30fps.mp4",
+      "page": "https://www.pexels.com/video/time-lapse-video-of-traffic-on-a-main-road-at-night-3727447/"
+    },
+    {
+      "id": "yellow-hood",
+      "url": "https://videos.pexels.com/video-files/14052197/14052197-hd_1920_1080_25fps.mp4",
+      "page": "https://www.pexels.com/video/hood-of-yellow-supercar-14052197/"
+    },
+    {
+      "id": "city-street",
+      "url": "https://videos.pexels.com/video-files/14335064/14335064-hd_1920_1080_30fps.mp4",
+      "page": "https://www.pexels.com/video/a-moving-car-on-the-road-between-city-buildings-at-night-14335064/"
+    },
+    {
+      "id": "black-car",
+      "url": "https://videos.pexels.com/video-files/4707181/4707181-hd_1920_1080_24fps.mp4",
+      "page": "https://www.pexels.com/video/video-of-a-moving-black-car-on-the-street-4707181/"
+    }
+  ],
+  "notes": "All direct URLs returned valid MP4 signatures in a read-only GitHub Actions validation; source copyrights remain with their owners. Do not represent footage as filmed by the account owner."
+}
