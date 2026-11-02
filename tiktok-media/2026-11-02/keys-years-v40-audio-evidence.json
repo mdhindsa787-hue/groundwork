@@ -1,0 +1,13 @@
+{
+  "id":"keys-years-v40",
+  "music_bpm":100,
+  "scene_and_voice_starts_seconds":[0,1.8,4.2,7.8,9.6],
+  "grid_seconds":0.6,
+  "voice_line_durations_seconds":[1.175,1.832,3.462,1.460,1.556],
+  "end_before_next_scene":true,
+  "integrated_loudness_lufs":-15.30,
+  "true_peak_dbfs":-1.61,
+  "loudness_range_lu":1.70,
+  "full_file_decode":"passed",
+  "subjective_voice_timbre_and_listening_fit":"unverified in this review; do not infer from the objective measurements"
+}

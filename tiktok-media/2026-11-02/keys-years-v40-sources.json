@@ -1,0 +1,16 @@
+{
+  "id": "keys-years-v40",
+  "checked_at": "2026-11-02",
+  "visual_sources": [
+    {"url":"https://www.pexels.com/video/sleek-red-sports-car-on-highway-at-twilight-36920514/","creator":"egeardaphotos","license":"Pexels Free license; asset page marks Free; modified into a new edited sequence","sha256":"06e51f29493b53b38fa0d14e1ac5d70bdd2a43904ad988451c42f62e618f5375"},
+    {"url":"https://www.pexels.com/video/a-highway-at-night-with-cars-driving-on-it-27852530/","creator":"Sururi Ballıdağ Director","license":"Pexels Free license; asset page marks Free; modified into a new edited sequence","sha256":"674184c7dcfdc45d065846eec838ab218566ee3c41fef69a6dc72421f2d32bd7"},
+    {"url":"https://www.pexels.com/video/car-driving-at-night-13643105/","creator":"Erik Mclean","license":"Pexels Free license; asset page marks Free; modified into a new edited sequence","sha256":"ae5bfbfe680a20a3dc6374bafa2f70322394cf25ee0323d74f80ccb7b63eb6b1"},
+    {"url":"https://www.pexels.com/video/sleek-car-in-dark-garage-with-headlights-on-30280409/","creator":"Ahmed Mahmood","license":"Pexels Free license; asset page marks Free; modified into a new edited sequence","sha256":"ad1833ac161f64e7ac9c4702ee0f5c85d8396c6465e602b114e65b4c3280c74c"}
+  ],
+  "license_url":"https://www.pexels.com/license/",
+  "audio":{
+    "voice":"macOS say Daniel voice, locally generated; five original spoken lines, no cloned or creator voice",
+    "music":"Original local procedural score, no third-party recording or samples",
+    "music_sha256":"040b22d1cdf4e6e7c2fab652e62460d7f8ce464960c2e2a090c8b85469728e39"
+  }
+}
