@@ -1,0 +1,13 @@
+{
+  "media_sha256":"ad4149183aa7a92be4f5f3f30189eecbe0d5adff223d0467258f79833d48b447",
+  "audio_stream":"AAC stereo, 48000 Hz",
+  "music_tempo_bpm":100,
+  "cut_beats_seconds":[0,2.4,4.8,7.2,8.4],
+  "voice_duration_seconds":8.30,
+  "integrated_loudness_lufs":-17.3,
+  "true_peak_dbfs":-1.5,
+  "loudness_range_lu":19.7,
+  "full_decode":"PASS",
+  "voice_timbre_audition":"NOT AVAILABLE IN THIS REVIEW SESSION",
+  "owner_instruction":"The owner lowered this ten-post campaign from perfection-oriented review to good-enough engagement quality on 2026-11-02; exact voice perception is retained as a residual risk, not claimed verified."
+}

@@ -1,0 +1,15 @@
+{
+  "video_sha256":"ad4149183aa7a92be4f5f3f30189eecbe0d5adff223d0467258f79833d48b447",
+  "checked_at":"2026-11-02",
+  "video_sources":[
+    {"asset":"Pexels 30280409","creator":"Ahmed Mahmood","source_url":"https://www.pexels.com/video/sleek-car-in-dark-garage-with-headlights-on-30280409/","license":"Pexels Free License; page lists Free","license_url":"https://www.pexels.com/license/","source_sha256":"ad1833ac161f64e7ac9c4702ee0f5c85d8396c6465e602b114e65b4c3280c74c"},
+    {"asset":"Pexels 13643105","creator":"Erik Mclean","source_url":"https://www.pexels.com/video/car-driving-at-night-13643105/","license":"Pexels Free License; page lists Free","license_url":"https://www.pexels.com/license/","source_sha256":"ae5bfbfe680a20a3dc6374bafa2f70322394cf25ee0323d74f80ccb7b63eb6b1"},
+    {"asset":"Pexels 27852530","creator":"Sururi Ballıdağ Director","source_url":"https://www.pexels.com/video/a-highway-at-night-with-cars-driving-on-it-27852530/","license":"Pexels Free License; page lists Free","license_url":"https://www.pexels.com/license/","source_sha256":"674184c7dcfdc45d065846eec838ab218566ee3c41fef69a6dc72421f2d32bd7"}
+  ],
+  "music":{"asset":"Original local score","sha256":"040b22d1cdf4e6e7c2fab652e62460d7f8ce464960c2e2a090c8b85469728e39","rights":"Locally generated; no third-party samples","bpm":100},
+  "voice":{"model":"Kokoro-82M am_onyx","speed":0.89,"voice_wav_sha256":"e0d94c22eb1afc3b854671843c1f3841d50cabadd0b372c45615491700eb51df","voice_pack_sha256":"da5d135b424164916d75a68ffb4c2abce3d7d5ccc82dd1ee6cf447ce286145e6","model_revision":"1939ad2","exact_playback_note":"Waveform, narration duration and mix loudness are measured. Voice timbre has not been subjectively auditioned in this session."},
+  "script":"Everyone sees the car. Their reaction lasts seconds. The payment keeps coming every month. They don't pay it. You do. Don't buy applause.",
+  "cut_grid_seconds":[0,2.4,4.8,7.2,8.4],
+  "audio_metrics":{"narration_duration_seconds":8.3,"integrated_lufs":-17.3,"true_peak_dbfs":-1.5,"loudness_range_lu":19.7},
+  "no_creator_assets_or_identity_used":true
+}
