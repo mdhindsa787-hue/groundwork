@@ -1,0 +1,41 @@
+{
+  "id": "own-target-v41c",
+  "checked_at": "2026-11-02",
+  "visual_sources": [
+    {
+      "url": "https://www.pexels.com/video/sleek-red-sports-car-in-dramatic-lighting-29498797/",
+      "creator": "Michael Pronin",
+      "license": "Pexels Free; modified and combined into an original short video; no brand endorsement claimed",
+      "media_url": "https://videos.pexels.com/video-files/29498797/12698109_2714_1440_24fps.mp4",
+      "sha256": "1f1ab0d0fd890c5697ee545365ec004ef6fd1640513474998be870721dd9c665"
+    },
+    {
+      "url": "https://www.pexels.com/video/speeding-red-sports-car-close-up-29498801/",
+      "creator": "Michael Pronin",
+      "license": "Pexels Free; modified and combined into an original short video; no brand endorsement claimed",
+      "media_url": "https://videos.pexels.com/video-files/29498801/12698139_2714_1440_24fps.mp4",
+      "sha256": "cbaa383a95db396bae441df38792e6712ee8187e873f9a66b825406801f3aaec"
+    },
+    {
+      "url": "https://www.pexels.com/video/sleek-red-sports-car-in-dramatic-lighting-29498799/",
+      "creator": "Michael Pronin",
+      "license": "Pexels Free; modified and combined into an original short video; no brand endorsement claimed",
+      "media_url": "https://videos.pexels.com/video-files/29498799/12698127_2714_1440_24fps.mp4",
+      "sha256": "48e61caf9375a6b9081db30547891513dca7f2b202d27a969089638c9948fe66"
+    },
+    {
+      "url": "https://www.pexels.com/video/sleek-sports-car-emerging-from-darkness-29498800/",
+      "creator": "Michael Pronin",
+      "license": "Pexels Free; modified and combined into an original short video; no brand endorsement claimed",
+      "media_url": "https://videos.pexels.com/video-files/29498800/12698079_2714_1440_24fps.mp4",
+      "sha256": "6ab4964519597a5aa0e75fef3e697752bdd55837e65140a94ad32d9e386883f3"
+    }
+  ],
+  "license_url": "https://www.pexels.com/license/",
+  "audio": {
+    "voice": "Four original macOS Samantha spoken phrases, locally generated; no cloned or creator voice",
+    "voice_sha256": "3349da2c01663d30a433afe9fe5920b1ea234ff9b5d30f965405445f611d29cd",
+    "music": "Original sample-free local procedural electronic score at 150 BPM; no third-party recording",
+    "music_sha256": "8097438dbdcc1db1a3d1ebf2e991d0fb0ddcef8dcc230499083aa1e2b60f624a"
+  }
+}

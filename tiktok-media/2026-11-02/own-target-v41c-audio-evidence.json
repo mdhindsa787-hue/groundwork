@@ -1,0 +1,15 @@
+{
+  "id": "own-target-v41c",
+  "music_bpm": 150,
+  "beat_grid_seconds": 0.4,
+  "picture_cut_starts_seconds": [0, 0.8, 1.6, 2.4, 3.2, 4, 4.8, 5.6, 6.4, 7.2, 8, 8.8],
+  "story_card_starts_seconds": [0, 2.4, 4.8, 7.2],
+  "voice_line_starts_seconds": [0.18, 2.58, 4.98, 7.38],
+  "voice_line_durations_seconds": [1.276438, 1.23625, 1.659563, 1.079833],
+  "voice_lines_end_before_next_card": true,
+  "integrated_loudness_lufs": -15.95,
+  "true_peak_dbfs": -2.88,
+  "loudness_range_lu": 3.4,
+  "full_file_decode": "passed",
+  "subjective_voice_timbre_and_listening_fit": "unverified: the available review tools did not support hearing the exact MP4; objective timing and levels do not prove natural vocal tone or music taste"
+}
