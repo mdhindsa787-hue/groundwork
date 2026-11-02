@@ -1,0 +1,54 @@
+{
+  "id": "ego-audience-v46b",
+  "file": "outputs/tiktok-v5-previews/money-mindset/ego-audience-v46b-candidate.mp4",
+  "media_sha256": "64c48ecba2b5a909057f97ed3c7519c1f1ce7ede06af73ea0d58a2f8e386bc15",
+  "black_team_passed": false,
+  "expert_council_passed": false,
+  "result": "VALIDATE_EXACT_AUDIO_AND_IMPROVE_EDIT",
+  "published": false,
+  "mission_lock": "Original car/money/ego/motivation post; campaign floor 8.5 mean, each of six categories at least 8, full exact MP4 watched with sound, subjective audio/visual pass, source rights, one post per hash, native TikTok verification. Latest public campaign count: 3 posts and 518 views at 2026-11-02 09:55 UTC.",
+  "stage_1_red_team": "The new line has a money consequence, but asks an old ego question. The action shot features a visibly different car and blue/red tarmac lighting from the generated rainy garage. The voice timbre and exact mix are unverified; the user recently rejected a canned voice. Publishing without hearing this MP4 would repeat that failure.",
+  "stage_2_black_team": "The car is identifiable in frame one; the 7.6-second cut has four readable text beats and a real wheel-to-taillight-to-smoke action beat. The ending 'you're paying for an audience' is a sharper ego/money payoff than v45b's 'just you and the car.' The three AI images share one car, setting and palette. The moving footage is a different car and only one of four visual beats contains photographed motion.",
+  "stage_3_expert_council": {
+    "status": "Simulated dissenting perspectives from one reviewer; no independent human or audio listener.",
+    "viewer": "A quick question and concrete payoff are understandable without voice, though the first still can feel like a poster.",
+    "editor": "The burnout gives the center energy but breaks same-car continuity.",
+    "rights": "Three generated images are original. Pexels source 30843746 is marked Free and the official Pexels license permits edited social use. Mixkit lists Need for speed under Free Stock Music and its license permits social posts. Kokoro model card declares Apache-2.0. These rights checks do not establish audible quality.",
+    "audio": "The exact audio was not heard. Its source WAV, file format and measured loudness prove structure and levels only."
+  },
+  "stage_4_rebuild": "Preserve the payoff and the consistent garage images. Match the real motion shot more closely to the car/lighting, or create another genuinely moving beat within the same garage scene; then audition the exact H.264/AAC export with sound before scoring its release readiness.",
+  "stage_5_repeat_verify": {
+    "comparison": "Compared with v45b, the final two cards now read 'IF YOUR ANSWER / CHANGES...' and 'YOU'RE PAYING / FOR AN AUDIENCE.' The latter states the financial consequence rather than simply naming an ego test.",
+    "visual": "Sixteen frames explicitly sampled from the exact MP4 at 0.25 to 7.4 seconds show all four beats, no letterboxing and readable typography. Generated car angles and real burnout remain visibly distinct sources.",
+    "technical": "SHA-256 64c48ecba2b5a909057f97ed3c7519c1f1ce7ede06af73ea0d58a2f8e386bc15; 7.600 seconds, 1080x1920 H.264, AAC 48 kHz; full FFmpeg decode exited 0. Integrated loudness -17.6 LUFS, true peak -1.5 dBFS.",
+    "audio": "Kokoro am_onyx generated a 6.1-second WAV at speed 0.98. Source WAV SHA-256 82d9f4a51120478b35dbeae9adc9ccc080fd00c9d077a984fd6ff2c0aec4a6ca. Exact narration and music fit have not been listened to or subjectively verified."
+  },
+  "stage_6_brutal_rating": {
+    "hook": 8.3,
+    "narrative_clarity": 8.2,
+    "visual_storytelling": 8.1,
+    "pacing_and_audio_integration": "UNVERIFIED",
+    "originality": 7.9,
+    "platform_fit": 8.2,
+    "weighted_score": "UNDETERMINED; audio unverified and originality below category floor",
+    "theoretical_quality_out_of_10": 7.8,
+    "evidence_strength_out_of_5": 3,
+    "execution_readiness_out_of_10": 5,
+    "confidence": "MEDIUM for visual/technical assessment, LOW for soundtrack and audience response"
+  },
+  "stage_7_final_verdict_execution": {
+    "verdict": "IMPROVE",
+    "release_status": "DO_NOT_POST_THIS_HASH",
+    "reason": "The category floor and subjective soundtrack gate remain unmet. A rendered file and licenses do not substitute for a perceptual review.",
+    "next_action": "Build a source-consistent moving beat and obtain exact-file listening evidence; rescore a new hash before any post.",
+    "pass_fail_condition": "Only a future exact MP4 with all categories at least 8, mean at least 8.5, no critical failures, positive full-MP4 sound/visual and rights attestations may enter the publisher gate.",
+    "evidence_that_would_change_decision": "A revised same-car motion sequence and a genuine listener-grade evaluation of the final voice/music mix."
+  },
+  "source_links": [
+    "https://www.pexels.com/video/dynamic-nighttime-muscle-car-burnout-30843746/",
+    "https://help.pexels.com/hc/en-us/articles/360042295174-What-is-the-license-of-the-photos-and-videos-on-Pexels",
+    "https://mixkit.co/free-stock-music/trap/",
+    "https://mixkit.co/license/modal/musicFree/",
+    "https://huggingface.co/onnx-community/Kokoro-82M-v1.0-ONNX"
+  ]
+}
